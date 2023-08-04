@@ -1,0 +1,394 @@
+ <html>
+
+<head>
+    <title>
+        Frontend
+    </title>
+
+<link rel="stylesheet" href="frontend.css">
+
+</head>
+
+<body>
+    <center>
+        <h1>"Good Online Store Name"</h1>
+        <br>
+    </center>
+
+    <div class="flex-container">
+        <div class="personalDetails">
+            <div>
+                <h2>POST Personal Details:</h2>
+                <h3>Personal Information:</h3>
+                <h3>Title</h3>
+                <!-- Drop down for title selection -->
+                <select id="postPersonalInformationTitle">
+                    <option value=""></option>
+                    <option value="Mx">Mx</option>
+                    <option value="Ms">Ms</option>
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Miss">Miss</option>
+                    <option value="Dr">Dr</option>
+                    <option value="Other">Other</option>
+                </select>
+                <br>
+
+                <h3>First Name</h3>
+                <input type="text" id="postPersonalInformationFirstName" placeholder="*">
+                <br>
+                <h3>Surname</h3>
+                <input type="text" id="postPersonalInformationSurname" placeholder="*">
+                <br>
+                <h3>Phone Number</h3>
+                <input type="text" id="postPersonalInformationMobile" placeholder="*">
+                <br>
+                <h3>Email</h3>
+                <input type="email" id="postPersonalInformationEmail" placeholder="*">
+                <br>
+                <br>
+
+
+                <h3>Billing Address:</h3>
+                <br>
+                <h3>Address Line 1</h3>
+                <input type="text" id="postBillingAddressLine1" placeholder="*">
+                <br>
+                <h3>Address Line 2</h3>
+                <input type="text" id="postBillingAddressLine2">
+                <br>
+                <h3>Town</h3>
+                <input type="text" id="postBillingAddressTown" placeholder="*">
+                <br>
+                <h3>County/City</h3>
+                <input type="text" id="postBillingAddressCounty" placeholder="*">
+                <br>
+                <h3>Eircode</h3>
+                <input type="text" id="postBillingAddressEircode">
+                <br>
+                <br>
+
+
+                <h3>Shipping Address:</h3>
+                <br>
+                <h3>Address Line 1</h3>
+                <input type="text" id="postShippingAddressLine1" placeholder="*">
+                <br>
+                <h3>Address Line 2</h3>
+                <input type="text" id="postShippingAddressLine2">
+                <br>
+                <h3>Town</h3>
+                <input type="text" id="postShippingAddressTown" placeholder="*">
+                <br>
+                <h3>County/City</h3>
+                <input type="text" id="postShippingAddressCounty" placeholder="*">
+                <br>
+                <h3>Eircode</h3>
+                <input type="text" id="postShippingAddressEircode">
+                <br>
+                <br>
+                <button id="postPersonalDetails" onclick="postPersonalDetails()">POST</button>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+
+            <div>
+                <h2>GET Personal Details:</h2>
+                <h3>First Name</h3>
+                <input type="text" id="getPersonalInformationFirstName" placeholder="*">
+                <br>
+                <h3>surname</h3>
+                <input type="text" id="getPersonalInformationSurname" placeholder="*">
+                <br>
+                <br>
+                <button id="getPersonalDetails" onclick="getPersonalDetails()">GET</button>
+                <h1 id="getPersonalDetailsAnswer"></h1>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+
+            <div>
+                <h2>PUT Personal Details:</h2>
+                <h3>Find Customer</h3>
+                <h3>First Name</h3>
+                <input type="text" id="putPersonalInformationFirstName" placeholder="*">
+                <br>
+                <h3>Surname</h3>
+                <input type="text" id="putPersonalInformationSurname" placeholder="*">
+                <h3>Update Customer</h3>
+                <br>
+                <h3>Title</h3>
+                <select id="putPersonalInformationTitle">
+                    <option value=""></option>
+                    <option value="Mx">Mx</option>
+                    <option value="Ms">Ms</option>
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Miss">Miss</option>
+                    <option value="Dr">Dr</option>
+                    <option value="Other">Other</option>
+                </select>
+                <br>
+                <h3>mobile</h3>
+                <input type="text" id="putPersonalInformationMobile" placeholder="*">
+                <br>
+                <h3>email</h3>
+                <input type="text" id="putPersonalInformationEmail" placeholder="*">
+                <h3>Shipping address Line 1</h3>
+                <input type="text" id="putShippingAddressLine1" placeholder="*">
+                <br>
+                <br>
+                <button id="putPersonalInformation" onclick="putPersonalDetails()">PUT</button>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+
+            <div>
+                <h2>DELETE Personal Details:</h2>
+                <h3>First Name</h3>
+                <input type="text" id="deletePersonalInformationFirstName" placeholder="*">
+                <br>
+                <h3>surname</h3>
+                <input type="text" id="deletePersonalInformationSurname" placeholder="*">
+                <h3>mobile</h3>
+                <input type="text" id="deletePersonalInformationMobile" placeholder="*">
+                <br>
+                <h3>email</h3>
+                <input type="text" id="deletePersonalInformationEmail" placeholder="*">
+                <br>
+                <br>
+                <button id="deletePersonalDetails" onclick="deletePersonalDetails()">DELETE</button>
+                <br>
+                <br>
+            </div>
+        </div>
+
+        <div class="itemDetails">
+            <div>
+                <h2>POST Item Details:</h2>
+                <h3>Manufacturer</h3>
+                <input type="text" id="postItemDetailsManufacturer" placeholder="*">
+                <br>
+                <h3>Model</h3>
+                <input type="text" id="postItemDetailsModel" placeholder="*">
+                <br>
+                <h3>Price</h3>
+                <input type="text" id="postItemDetailsPrice" placeholder="*">
+                <br>
+                <br>
+                <button id="postItemDetails" onclick="postItemDetails()">POST</button>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+
+            <div>
+                <h2>GET Item Details:</h2>
+                <h3>Manufacturer</h3>
+                <input type="text" id="getItemDetailsManufacturer" placeholder="*">
+                <br>
+                <h3>Model</h3>
+                <input type="text" id="getItemDetailsModel" placeholder="*">
+                <br>
+                <br>
+                <button id="getItemDetails" onclick="getItemDetails()">GET</button>
+                <h1 id="getItemDetailsAnswer"></h1>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+
+            <div>
+                <h2>PUT Item Details:</h2>
+                <h3>Find Item</h3>
+                <h3>Manufacturer</h3>
+                <input type="text" id="putItemDetailsManufacturer" placeholder="*">
+                <br>
+                <h3>Model</h3>
+                <input type="text" id="putItemDetailsModel" placeholder="*">
+                <h3>Update Item</h3>
+                
+                <h3>Price</h3>
+                <input type="text" id="putItemDetailsPrice" placeholder="*">
+                <br>
+                <br>
+                <button id="putItemDetails" onclick="putItemDetails()">PUT</button>
+                <h1 id="answer"></h1>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+
+            <div>
+                <h2>DELETE Item Details:</h2>
+                <h3>Manufacturer</h3>
+                <input type="text" id="deleteItemDetailsManufacturer" placeholder="*">
+                <br>
+                <h3>Model</h3>
+                <input type="text" id="deleteItemDetailsModel" placeholder="*">
+                <br>
+                <h3>Price</h3>
+                <input type="text" id="deleteItemDetailsPrice" placeholder="*">
+                <br>
+                <br>
+                <button id="deleteItemDetails" onclick="deleteItemDetails()">DELETE</button>
+                <h1 id="answer"></h1>
+            </div>
+        </div>
+
+        <div class="orderDetails">
+            <div>
+                <h2>POST Order Details:</h2>
+                <h3>Personal Information:</h3>
+                <h3>Title</h3>
+                <!-- Drop down for title selection -->
+                <select id="postOrderDetailsTitle">
+                    <option value=""></option>
+                    <option value="Mx">Mx</option>
+                    <option value="Ms">Ms</option>
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Miss">Miss</option>
+                    <option value="Dr">Dr</option>
+                    <option value="Other">Other</option>
+                </select>
+                <br>
+
+                <h3>First Name</h3>
+                <input type="text" id="postOrderDetailsFirstName" placeholder="*">
+                <br>
+                <h3>Surname</h3>
+                <input type="text" id="postOrderDetailsSurname" placeholder="*">
+                <br>
+                <h3>Phone Number</h3>
+                <input type="text" id="postOrderDetailsMobile" placeholder="*">
+                <br>
+                <h3>Email</h3>
+                <input type="email" id="postOrderDetailsEmail" placeholder="*">
+                <br>
+                <br>
+                <h3>Items:</h3>
+                <h3>Manufacturer</h3>
+                <input type="text" id="postOrderDetailsManufacturer" placeholder="*">
+                <br>
+                <h3>Model</h3>
+                <input type="text" id="postOrderDetailsModel" placeholder="*">
+                <br>
+                <h3>Price</h3>
+                <input type="text" id="postOrderDetailsPrice" placeholder="*">
+                <br>
+                <br>
+                <button id="addOrderItem" onclick="addOrderItem()">ADD iTEM</button>
+                <button id="addOrderItem" onclick="clearOrderItems()">CLEAR ITEMS</button>
+                <br>
+                <br>
+                <button id="postOrderDetails" onclick="postOrderDetails()">POST</button>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+
+            <div>
+                <h2>GET Order Details:</h2>
+                <h3>First Name</h3>
+                <input type="text" id="getOrderDetailsFirstName" placeholder="*">
+                <br>
+                <h3>surname</h3>
+                <input type="text" id="getOrderDetailsSurname" placeholder="*">
+                <h3>Mobile</h3>
+                <input type="text" id="getOrderDetailsMobile" placeholder="*">
+                <h3>Email</h3>
+                <input type="text" id="getOrderDetailsEmail" placeholder="*">
+                <br>
+                <br>
+                <button id="getOrderDetails" onclick="getOrderDetails()">GET</button>
+                <h1 id="getOrderDetailsAnswer"></h1>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+
+            <div>
+                <h2>PUT Order Details:</h2>
+                <h3>Find Order</h3>
+                <h3>First Name</h3>
+                <input type="text" id="putOrderDetailsFirstName" placeholder="*">
+                <br>
+                <h3>surname</h3>
+                <input type="text" id="putOrderDetailsSurname" placeholder="*">
+                <h3>Mobile</h3>
+                <input type="text" id="putOrderDetailsMobile" placeholder="*">
+                <h3>Email</h3>
+                <input type="text" id="putOrderDetailsEmail" placeholder="*">
+                <h3>Update Order</h3>
+                <br>
+                <h3>Manufacturer</h3>
+                <input type="text" id="putOrderDetailsManufacturer" placeholder="*">
+                <br>
+                <h3>Model</h3>
+                <input type="text" id="putOrderDetailsModel" placeholder="*">
+                <h3>Price</h3>
+                <input type="text" id="putOrderDetailsPrice" placeholder="*">
+                <h3>Email</h3>
+                <input type="text" id="putNewOrderDetailsEmail" placeholder="*">
+                <br>
+                <br>
+                <button id="putOrderDetails" onclick="putOrderDetails()">PUT</button>
+                <h1 id="answer"></h1>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+
+            <div>
+                <h2>DELETE Order Details:</h2>
+                <h3>First Name</h3>
+                <input type="text" id="deleteOrderDetailsFirstName" placeholder="*">
+                <br>
+                <h3>surname</h3>
+                <input type="text" id="deleteOrderDetailsSurname" placeholder="*">
+                <h3>mobile</h3>
+                <input type="text" id="deleteOrderDetailsMobile" placeholder="*">
+                <br>
+                <h3>email</h3>
+                <input type="text" id="deleteOrderDetailsEmail" placeholder="*">
+                <br>
+                <br>
+                <button id="deleteOrderDetails" onclick="deleteOrderDetails()">DELETE</button>
+                <h1 id="answer"></h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="frontend.js"></script>
+
+</html>
+
+<!-- 
+I used the latest version of google chrome as of the time of the assignment
+8/05/23 - version 110.0.5481.177 on Windows
+-->

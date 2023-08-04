@@ -1,0 +1,7 @@
+Run backend.js using node
+
+This will send the frontend.html to localhost 3000
+
+From there you can interact with Mongodb through the client.
+
+There is frontend.js and frontend.css which the html accesses for functionality and basic formatting respectively

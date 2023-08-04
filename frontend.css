@@ -1,0 +1,29 @@
+/* Minimal CSS for spacing and neatness */
+h3 {
+    display: block;
+    margin-top: 0.67em;
+    margin-bottom: 0em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+.flex-container
+{
+    display: flex;
+}
+
+.itemDetails
+{
+    margin-left: 650px;
+}
+
+.personalDetails
+{
+    margin-left: 10px;
+}
+
+.orderDetails
+{
+    margin-left: 600px;
+}
